@@ -12,10 +12,10 @@ export function HeroSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1920&q=80')",
+            "url('https://wisehosting.com/images/Background1.avif')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/60 to-background" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
