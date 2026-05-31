@@ -34,7 +34,7 @@ const faqs = [
   },
   {
     question: "What are the hardware specs of the servers?",
-    answer: "We use AMD Ryzen 5000 series processors, NVMe SSD storage, and DDR4 ECC RAM. All servers include DDoS protection and are located in multiple data centers worldwide.",
+    answer: "We use high-performance Intel Xeon-E 2136 and Intel Xeon-E 2386G processors, NVMe SSD storage, and DDR4 ECC RAM. All servers include DDoS protection and are located in multiple data centers worldwide.",
   },
   {
     question: "Can I install mods, plugins, or modpacks to my server?",

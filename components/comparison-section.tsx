@@ -8,8 +8,8 @@ const comparisons = [
     id: "performance",
     label: "Performance",
     icon: Cpu,
-    us: { title: "AMD Ryzens", description: "Latest AMD Ryzen 3800X–5000X CPUs for maximum performance. Smooth TPS, lag-free, and faster chunk loading." },
-    others: { title: "Old Xeons", description: "Outdated 2014-era Xeon processors with weak single-thread speed. Lag spikes and unstable tick rates." },
+    us: { title: "Intel Xeon-E", description: "High-performance Intel Xeon-E 2136 and 2386G CPUs for maximum performance. Smooth TPS, lag-free, and faster chunk loading." },
+    others: { title: "Old Processors", description: "Outdated 2014-era server processors with weak single-thread speed. Lag spikes and unstable tick rates." },
   },
   {
     id: "support",

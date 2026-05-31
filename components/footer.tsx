@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Headphones, Clock, Shield, Zap } from "lucide-react";
 
 const footerLinks = {
@@ -48,12 +49,16 @@ export function Footer() {
         {/* Top section */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-12 pb-12 border-b border-border">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">C</span>
-            </div>
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/favicon/favicon.svg"
+              alt="CodeOn Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10 object-contain"
+            />
             <span className="text-2xl font-bold text-foreground">CodeOn</span>
-          </div>
+          </Link>
 
           {/* Trust badges */}
           <div className="flex flex-wrap gap-6">
