@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Headphones, Clock, Server, HardDrive, Cpu, Check } from "lucide-react";
 import Image from "next/image";
+import { WardenScene } from "@/components/warden-scene";
 
 export function HeroSection() {
   return (
@@ -87,6 +88,11 @@ export function HeroSection() {
                 Order Now
               </a>
             </Button>
+          </div>
+
+          {/* Right Side - 3D Warden Scene */}
+          <div className="w-full h-full flex items-center justify-center relative min-h-[400px] lg:min-h-[500px]">
+            <WardenScene />
           </div>
         </div>
 
