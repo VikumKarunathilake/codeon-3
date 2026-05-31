@@ -12,9 +12,27 @@ const serverTypes = [
 ];
 
 const plans = [
-  { name: "Zombie", ram: "2 GB", price: "$5.99", color: "from-gray-500 to-gray-600" },
-  { name: "Creeper", ram: "4 GB", price: "$11.99", color: "from-green-500 to-green-600" },
-  { name: "Blaze", ram: "8 GB", price: "$22.99", color: "from-orange-500 to-orange-600" },
+  {
+    name: "Zombie",
+    ram: "2 GB",
+    price: "$5.99",
+    color: "from-gray-500 to-gray-600",
+    image: "https://wisehosting.com/images/heads/zombie.webp",
+  },
+  {
+    name: "Creeper",
+    ram: "4 GB",
+    price: "$11.99",
+    color: "from-green-500 to-green-600",
+    image: "https://wisehosting.com/images/heads/creeper.webp",
+  },
+  {
+    name: "Blaze",
+    ram: "8 GB",
+    price: "$22.99",
+    color: "from-orange-500 to-orange-600",
+    image: "https://wisehosting.com/images/heads/blaze.webp",
+  },
 ];
 
 export function RamCalculatorSection() {
@@ -113,8 +131,18 @@ export function RamCalculatorSection() {
           <div className="bg-card border border-border rounded-2xl p-8">
             <div className="text-center mb-6">
               <span className="text-sm text-muted-foreground">Recommended plan</span>
-              <div className={`w-20 h-20 mx-auto my-4 rounded-xl bg-gradient-to-br ${recommendedPlan.color} flex items-center justify-center`}>
-                <Cpu className="w-10 h-10 text-white" />
+              <div className={`w-20 h-20 mx-auto my-4 rounded-xl bg-gradient-to-br ${recommendedPlan.color} flex items-center justify-center overflow-hidden p-2`}>
+                {recommendedPlan.image ? (
+                  <img
+                    src={recommendedPlan.image}
+                    alt={recommendedPlan.name}
+                    className="w-14 h-14 object-contain select-none pointer-events-none drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:scale-110"
+                  />
+                ) : (
+                  <span className="text-3xl">
+                    {recommendedPlan.name === "Zombie" ? "🧟" : recommendedPlan.name === "Creeper" ? "💚" : "🔥"}
+                  </span>
+                )}
               </div>
               <h3 className="text-2xl font-bold text-foreground">{recommendedPlan.name}</h3>
               <p className="text-muted-foreground">{recommendedPlan.ram} RAM</p>
