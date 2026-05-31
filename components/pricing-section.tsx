@@ -7,6 +7,7 @@ import { Check, Shield, Clock, X } from "lucide-react";
 const plans = [
   {
     name: "Zombie",
+    image: "https://wisehosting.com/images/heads/zombie.webp",
     ram: "2 GB",
     description: "Good for testing, running bedrock or saving your world files here.",
     storage: "10 GB Storage",
@@ -18,6 +19,7 @@ const plans = [
   },
   {
     name: "Creeper",
+    image: "https://wisehosting.com/images/heads/creeper.webp",
     ram: "4 GB",
     description: "Good starter server for light mods or plugins on newer versions.",
     storage: "25 GB Storage",
@@ -29,6 +31,7 @@ const plans = [
   },
   {
     name: "Blaze",
+    image: "https://wisehosting.com/images/heads/blaze.webp",
     ram: "8 GB",
     description: "Discover thousands of modpacks or easily run vanilla.",
     storage: "50 GB Storage",
@@ -116,11 +119,19 @@ export function PricingSection() {
                 </div>
               )}
 
-              {/* Mob icon placeholder */}
-              <div className="w-16 h-16 bg-secondary rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl">
-                  {plan.name === "Zombie" ? "🧟" : plan.name === "Creeper" ? "💚" : "🔥"}
-                </span>
+              {/* Mob icon */}
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                {plan.image ? (
+                  <img
+                    src={plan.image}
+                    alt={plan.name}
+                    className="w-12 h-12 object-contain select-none pointer-events-none drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:scale-110"
+                  />
+                ) : (
+                  <span className="text-2xl">
+                    {plan.name === "Zombie" ? "🧟" : plan.name === "Creeper" ? "💚" : "🔥"}
+                  </span>
+                )}
               </div>
 
               <h3 className="text-xl font-bold text-foreground text-center mb-2">
